@@ -2,13 +2,13 @@
   "name": "gh-pages",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ppbasleng.github.io/react-gh-pages",
+  "homepage": "https://ppbasleng.github.io",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -32,5 +32,11 @@
     "postcss": "^8.4.28",
     "tailwindcss": "^3.3.3",
     "vite": "^4.4.5"
+  },
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs"
+    }
   }
 }
