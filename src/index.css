@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scroll-container {
+  position: relative;
+  scrollbar-width: none;
+
+  /* scroll-snap-type: y mandatory;
+  overscroll-behavior-y: contain;
+  scroll-snap-align: center; */
+
+  /* overflow-y: scroll; */
+
+  height: 100vh;
+  width: 100%;
+
+
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-color: #000000;
+  --swiper-pagination-bullet-inactive-color: #999999;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 16px;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+
+  transition: all 0.4s ease-in-out;
+  transform: rotate(45deg);
+}
+
+.swiper-pagination-bullet:hover {
+  scale: 1.2;
+  border-radius: 0;
+  transform: rotate(225deg);
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-page {
+  /* scroll-snap-align: start; */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  position: relative;
+  padding: 50px;
+
+}
+
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #4b5563;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.skill-icon {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.link-icon {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
